@@ -1,0 +1,62 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
+  </head>
+  <body>
+    <div class="row text-center mx-3 rounded-3" style="border: 5px solid blue">
+      <div class="col-6">
+        <img id="sh" src="css/images/1.jpg" />
+      </div>
+      <div class="col-6 mt-3">
+        <input
+          type="text"
+          id="us"
+          placeholder="us"
+          class="mt-3 btn-outline-primary"
+        />
+        <input
+          type="password"
+          id="pass"
+          placeholder="pass"
+          class="mt-3 btn-outline-primary"
+        /><br />
+        <button class="mt-3 btn btn-outline-primary" onclick="show()">
+          show
+        </button>
+        <button class="mt-3 btn btn-outline-primary" onclick="hiden()">
+          hiden</button
+        ><br />
+        <button
+          class="mt-3 btn btn-outline-primary form-control"
+          onclick="logen()"
+        >
+          logen
+        </button>
+      </div>
+    </div>
+  </body>
+  <script>
+    function show() {
+      document.getElementById("pass").type = "text";
+      document.getElementById("sh").src = "css/images/2.jpg";
+    }
+    function hiden() {
+      document.getElementById("pass").type = "password";
+      document.getElementById("sh").src = "css/images/1.jpg";
+    }
+    function logen() {
+      if (
+        document.getElementById("us").value == "admin" &&
+        document.getElementById("pass").value == "admin"
+      ) {
+        alert("yes");
+      } else {
+        alert("on");
+      }
+    }
+  </script>
+</html>
